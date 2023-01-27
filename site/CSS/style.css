@@ -37,7 +37,6 @@ body {
 
 header {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: absolute;
     top: 0;
@@ -70,9 +69,12 @@ nav ul {
 
 nav ul a {
     color: var(--text-color);
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
+    width: 25%;
 }
 
 header nav div {
