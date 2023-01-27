@@ -45,6 +45,7 @@ header {
     background: var(--background-color);
     z-index: 2;
     padding: 5vh;
+    box-shadow: 0 1vh 1rem 0 var(--text-color);
 }
 
 ul {
@@ -172,7 +173,6 @@ div.body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 25%;
 }
 
 #eyeIcon:hover {
@@ -219,6 +219,10 @@ footer {
     width: 100%;
     background: #191919;
     bottom: 0;
+}
+
+.footer-item {
+    width: 25vw;
 }
 
 #socials {
