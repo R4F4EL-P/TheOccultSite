@@ -6,15 +6,21 @@ import * as CUBE from './libs/objects/cube.js';
 import * as PYRAMID from './libs/objects/pyramid.js';
 import { perspective } from "./libs/MV.js";
 
+
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', function () {
+    this.classList.toggle('is-active');
+});
+
+
+
 /** @type WebGLRenderingContext */
 let gl;
 
 let mode;              // Drawing mode (gl.LINES or gl.TRIANGLES)
 let vp;
-let isMouseDown = false;
-let isWDown = false;
-let initialMousePos = {x:0, y:0}
-let mouseMovement = {x:0, y:0}
 let frame = 0;
 let apperture = 0;
 
@@ -104,41 +110,6 @@ function setup(shaders)
     CUBE.init(gl);
     PYRAMID.init(gl);
     gl.enable(gl.DEPTH_TEST);   // Enables Z-buffer depth test
-
-    document.onkeydown = function(event){
-        if(event.key == 'w')
-            isWDown = true;
-    }
-
-    document.onkeyup = function(event) {
-        if(event.key == 'w')
-            isWDown = false;
-    }
-    
-    window.addEventListener("mousedown", function(event) {
-        isMouseDown = true;
-        initialMousePos.x = (event.clientX / window.innerWidth) * 2 - 1;
-        initialMousePos.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    });
-
-    window.addEventListener("mouseup", function() {
-        isMouseDown = false;
-    });
-
-    window.addEventListener("mousemove", function(event) {
-        if(isMouseDown && isWDown) {
-            let finalMousePos = {x: (event.clientX / window.innerWidth) * 2 - 1, y: -(event.clientY / window.innerHeight) * 2 + 1};
-            
-            mouseMovement.x = (finalMousePos.x - initialMousePos.x);
-            mouseMovement.y = (finalMousePos.y - initialMousePos.y);
-
-            camera.eye.x += mouseMovement.x * 10;
-            camera.eye.z += mouseMovement.x * 10;
-            camera.eye.y += mouseMovement.y * 20;
-
-            initialMousePos = finalMousePos;
-        }
-    });
     
     window.requestAnimationFrame(render);
 
