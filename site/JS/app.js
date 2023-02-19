@@ -7,14 +7,42 @@ import * as PYRAMID from './libs/objects/pyramid.js';
 import { perspective } from "./libs/MV.js";
 
 
-
 const hamburger = document.querySelector('.hamburger');
 const mobile_menu = document.querySelector('.mobile-menu');
+
+const discord_svg = document.querySelector('#discord');
+const twitter_svg = document.querySelector('#twitter');
+const instagram_svg = document.querySelector('#instagram');
 
 hamburger.addEventListener('click', function () {
     this.classList.toggle('is-active');
     mobile_menu.classList.toggle('is-active');
 });
+
+/* Change SVG color */
+
+discord_svg.addEventListener('mouseover', function () {
+    this.style.fill = '#e81747'
+});
+discord_svg.addEventListener('mouseout', function () {
+    this.style.fill = '#fff'
+});
+
+twitter_svg.addEventListener('mouseover', function () {
+    this.style.fill = '#e81747'
+});
+twitter_svg.addEventListener('mouseout', function () {
+    this.style.fill = '#fff'
+});
+
+instagram_svg.addEventListener('mouseover', function () {
+    this.style.fill = '#e81747'
+});
+instagram_svg.addEventListener('mouseout', function () {
+    this.style.fill = '#fff'
+});
+
+/*===========================================================*/
 
 /** @type WebGLRenderingContext */
 let gl;
