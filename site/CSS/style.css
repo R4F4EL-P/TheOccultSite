@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -23,15 +24,16 @@ html::-webkit-scrollbar-thumb {
     background-color: #171717ae;
 }
 :root {
+    --font-link: Teko, Helvetica, Arial, sans-serif;
     --text-color: #e81747;
     --background-color:  #171717;
 }
 
 body {
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: var(--font-link);
     background-color: var(--background-color);
     color: white;
-    font-size: 1em;
+    font-size: 1.25rem;
     line-height: 1.6;
     width: 100%;
 }
@@ -70,7 +72,7 @@ header nav {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     font-weight: bold;
     width: 7vw;
 }
@@ -213,16 +215,21 @@ div.body {
 
 .title_lines {
     position: relative;
+    font-size: 2.5rem;
     z-index: 1;
     overflow: hidden;
     text-align: center;
     width: 75%;
     margin-top: 5vh;
     margin-bottom: 5vh;
+    text-shadow: 
+        0 0 0.2em #fff,
+        0 0 0.3em var(--text-color),
+        0 0 0.5em hsl(346, 100%, 50%);
 }
 .title_lines:before, .title_lines:after {
     position: absolute;
-    top: 25%;
+    top: 40%;
     overflow: hidden;
     width: 48%;
     height: 10px;
@@ -332,7 +339,7 @@ h2 {
 
 footer {
     align-items: baseline;
-    font-size: 14px;
+    font-size: 1rem;
     height: 150px;
     width: 100%;
     background: #191919;
@@ -358,7 +365,7 @@ span.copyright {
     overflow: hidden;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 2em;
+    font-size: 2rem;
     letter-spacing: 1.5px;
     cursor: pointer;
 }
