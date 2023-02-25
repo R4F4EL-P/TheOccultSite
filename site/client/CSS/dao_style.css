@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;500;700&family=Unica+One&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10vh;
+}
+html::-webkit-scrollbar {
+    width: 5px;
+}
+html::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: #ffffff3e;
+}
+html::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-clip: content-box;
+    background-color: #171717ae;
+}
+:root {
+    --font-nav: Unica One, sans-serif;
+    --font-link: Teko, sans-serif;
+    --text-color: #e81747;
+    --background-color:  #171717;
+}
+
+body {
+    font-family: var(--font-link);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    width: 95%;
+    font-family: var(--font-nav);
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h2 {
+    display: inline;
+    border-bottom: 3px solid #f9dd94;
+    padding: 0 25px;
+}
+
+.row-even {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+footer {
+    align-items: baseline;
+    font-size: 1rem;
+    height: 150px;
+    width: 100%;
+    background: #191919;
+    bottom: 0;
+}
+
+.collumn-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item {
+    width: 25vw;
+}
+
+#socials {
+    align-items: center;
+    height: 70px;
+    gap: 25px;
+}
+
+span.copyright {
+    color: gray;
+}
+
+.glitch {
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.glitch:hover::before {
+    color: #e91e63;
+    z-index: -2;
+    animation: glitch 0.3s linear infinite;
+}
+.glitch:hover::after {
+    color: #2196f3;
+    z-index: -1;
+    animation: glitch 0.3s linear reverse infinite;
+}
+@keyframes glitch {
+    0%{
+        top: 0;
+        left: 0;
+    }
+    20%{
+        top: -6px;
+        left: -6px;
+    }
+    40%{
+        top: 6px;
+        left: 6px;
+    }
+    60%{
+        top: -6px;
+        left: 6px;
+    }
+    80%{
+        top: 6px;
+        left: -6px;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
