@@ -1,6 +1,6 @@
 # TheOccultSite
 
-The project uses node.js and express.js to create a webserver, to run it use the command inside the main folder:
+The project uses **node.js** and **express.js** to create a webserver, to run it use the command inside the main folder:
 ```shell
 node index.js
 ```
