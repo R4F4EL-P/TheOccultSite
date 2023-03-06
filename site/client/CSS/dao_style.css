@@ -42,8 +42,55 @@ body {
     width: 100%;
 }
 
-header {
+.flex {
     display: flex;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.text-xl {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.h-secren {
+    height: 100vh;
+}
+
+.rounded-md {
+    border-radius: 25px;
+}
+
+.bg-discord-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(1, 98, 255);
+}
+  
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+  
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.hover:hover {
+    background-color: #808080;
+    transition-duration: 75ms;
+}
+
+.width-10 {
+    width: 10rem;
+}
+
+header {
     justify-content: flex-start;
     width: 95%;
     font-family: var(--font-nav);
