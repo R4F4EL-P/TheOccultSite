@@ -278,6 +278,8 @@ div.body {
         right: auto;
         width: 100%;
         flex-direction: column;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 }
 
@@ -433,6 +435,18 @@ span.copyright {
     }
 }
 
+.wobble {
+    animation: wobble 2s linear reverse infinite;
+}
+
+@keyframes wobble {
+    25% { transform: translate(0px, -10px); }
+    
+    75% { transform: translate(0px, 10px); }
+
+    100% { transform: translate(0px, 0px); }
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
@@ -444,4 +458,24 @@ span.copyright {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.spacer {
+    aspect-ratio: 900/600;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1 {
+    background-image: url('../src/layer1.svg');
+}
+
+.layer2 {
+    background-image: url('../src/layer2.svg');
+}
+
+.footer_layer {
+    background-image: url('../src/layer1.svg');
 }
