@@ -16,6 +16,8 @@ const zoomingSpeed = 0.1;
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
     link.href = FAVICON_BLACK;
+} else {
+    link.href = FAVICON_WHITE;
 }
 
 hamburger.addEventListener('click', function () {
