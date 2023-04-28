@@ -1,8 +1,7 @@
 const { response } = require('express');
 const express = require('express');
 const app = express();
-
-const port = '5000'; 
+const port = 5000;
 
 app.get('/', (request, response) => {
 	return response.sendFile('client/index.html', { root: '.' });
