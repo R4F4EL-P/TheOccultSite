@@ -26,6 +26,9 @@ function themeChange(event) {
     }
 }
 
+window.onload = function () {
+    window.scrollTo(0, 0);
+}
 
 hamburger.addEventListener('click', function () {
     this.classList.toggle('is-active');
