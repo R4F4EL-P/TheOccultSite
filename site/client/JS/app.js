@@ -14,11 +14,18 @@ const link = document.querySelector("link[rel~='icon']");
 let zoom = 1;
 const zoomingSpeed = 0.1;
 
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    link.href = FAVICON_BLACK;
-} else {
-    link.href = FAVICON_WHITE;
+
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+mediaQuery.addEventListener('change', themeChange)
+
+function themeChange(event) {
+    if (event.matches) {
+        link.href = FAVICON_WHITE;
+    } else {
+        link.href = FAVICON_BLACK;
+    }
 }
+
 
 hamburger.addEventListener('click', function () {
     this.classList.toggle('is-active');
