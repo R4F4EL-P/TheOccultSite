@@ -45,6 +45,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 2;
+    background-color: #00000079;
+    transition: all 1s;
 }
 
 ul {
@@ -537,7 +539,7 @@ span.copyright {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #FFF;
+    color: #000000;
     font-size: larger;
     letter-spacing: 5px;
     font-weight: 700;
@@ -558,4 +560,9 @@ span.copyright {
 
 .footer_layer {
     background-image: url('../src/footer_layer.svg');
+}
+
+.hide {
+    transform: translateY(-10vh);
+    transition: all 0.5s;
 }

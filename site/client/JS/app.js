@@ -1,3 +1,4 @@
+const header = document.querySelector('header');
 const hamburger = document.querySelector('.hamburger');
 const mobile_menu = document.querySelector('.mobile-menu');
 
@@ -13,6 +14,7 @@ const door = document.querySelector('#door');
 const link = document.querySelector("link[rel~='icon']");
 let zoom = 1;
 const zoomingSpeed = 0.1;
+let lastKnownScrollPosition = 0;
 
 
 const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
@@ -59,6 +61,20 @@ instagram_svg.addEventListener('mouseover', function () {
 instagram_svg.addEventListener('mouseout', function () {
     this.style.fill = '#fff'
 });
+
+document.addEventListener('scroll',() => {
+    let show = (window.scrollY - lastKnownScrollPosition) <= 0;
+    lastKnownScrollPosition = window.scrollY;
+
+    console.log(show);
+  
+    if (show) {
+        header.classList.remove('hide');
+    } else {
+        header.classList.add('hide');
+    }
+});
+
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
