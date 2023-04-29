@@ -28,6 +28,7 @@ function themeChange(event) {
 
 window.onload = function () {
     window.scrollTo(0, 0);
+    themeChange(mediaQuery);
 }
 
 hamburger.addEventListener('click', function () {
