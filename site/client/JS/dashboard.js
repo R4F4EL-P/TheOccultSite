@@ -1,4 +1,4 @@
-const SERVERID="996472737696600175";
+
 
 window.onload = () => {
     const fragment = new URLSearchParams(window.location.hash.slice(1));
