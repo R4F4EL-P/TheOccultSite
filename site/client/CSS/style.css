@@ -468,6 +468,10 @@ span.copyright {
     background-size: cover;
 }
 
+.sliding-cards {
+    max-width: 600px;
+}
+
 .card {
     position: relative;
     height: 100%;
@@ -519,7 +523,8 @@ span.copyright {
     font-size: medium;
     color: #FFF;
     letter-spacing: 3px;
-    padding-right: 1vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
 }
 
 .card .card-btn {
